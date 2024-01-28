@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    /* float: right; */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .about-col-1 {
+    flex-basis: 10%;
+} */
+
+
+/* .about-col-1 img {
+
+    box-shadow: -15px -28px 40px 1px rgb(12, 35, 41);
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50pxpx;
+} */
+.nav-logos{
+    /* margin-left: 10px; */
+    /* display: flex; */
+    flex-wrap: wrap;
+
+}
+#cartoon-logo{
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    border-radius: 30px;
+    box-shadow: -15px -28px 40px 1px rgb(25, 54, 61);
+}
+#name-logo{
+    margin: 0;
+}
+.logo {
+    width: 140px;
+
+
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+
+nav ul li:hover{
+        transition: smooth;
+        font-weight: bold;
+        
+    }
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #fff200;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.header-text h1 span {
+    font-size: 60px;
+    color: #ffee00;
+}
+
+.btn2 {
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff0084;
+    padding: 14px 50px;
+    border-radius: 26px;
+    text-decoration: none;
+    color: white;
+    background: #080708;
+    transition: 0.6s;
+    font-weight: 500;
+}
+
+.btn2:hover {
+    background: #ff0084;
+
+}
+
+
+
+/* ------------About---------- */
+
+#about {
+    padding: 80px 0;
+    color: rgb(252, 247, 247);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .about-col-1 {
+    flex-basis: 35%;
+}
+
+
+.about-col-1 img {
+
+    box-shadow: -15px -28px 40px 1px rgb(12, 35, 41);
+    width: 65%;
+    border-radius: 15px;
+} */
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(225, 255, 0);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.7s;
+}
+
+.tab-links:hover::after {
+    background: rgb(0, 255, 234);
+    width: 100%;
+}
+
+.tab-links.active-link::after {
+
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #09e8f8;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+/* ------------services--------- */
+
+
+
+
+
+/* --------my work/Portfolio--------*/
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.work i{
+    color: #ffffff;
+    transition: transform 0.5s;
+    
+}
+
+.work i:hover{
+    color: #02fbee;
+    
+    transform: scale(1.5);
+    
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #fc1eb6);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.7s;
+}
+
+.layer a img {
+    width: 27px;
+
+}
+
+.layer h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #111111;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    /* background: #ffffff; */
+    width: 35px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover img {
+    transform: scale(1.2);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff0084;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: 0.6s;
+}
+
+.btn:hover {
+    background: #ff0084;
+}
+
+
+
+
+/* ----------contact me---------- */
+
+.contact-left {
+    flex-basis: 35%
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff00bf;
+}
+
+.contact-right {
+    flex-basis: 60%;
+    margin-top: 70px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+    transition: transform 0.6s;
+}
+
+.social-icons a:hover {
+    color: #ff0084;
+    transform: translatey(-7px);
+}
+
+.contact-right form {
+    width: 100%;
+
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+form .btn2 {
+    padding: 14px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.msg {
+    margin-top: 60px;
+}
+
+
+
+/* -----------footer --------- */
+
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 400;
+    margin-top: 20px;
+
+}
+
+.copyright i {
+    color: #e5ff00;
+}
+
+
+
+
+/* -------css for small screen using media Queary -------- */
+
+nav .sml-scrn-icon {
+    display: none;
+}
+
+@media only screen and (max-width:820px) {
+    #header {
+        background-image: url(/images/ph_bg.png);
+        /* margin-left: 28px; */
+        
+    }
+
+    .header-text {
+        margin-top: 35vh;
+        font-size: 16px;
+        /* color: #02ecfd; */
+    }
+
+    .header-text h1 {
+        font-size: 28px;
+        
+    }
+    .header-text h1 span{
+        font-size: 41px;
+        
+    }
+
+    nav .sml-scrn-icon {
+        display: block;
+        font-size: 25px;
+        
+    }
+
+    nav ul {
+        background: #ff0084;
+        position: fixed;
+        top: 0;
+        right: -900px;
+        width: 35%;
+        height: 100%;
+        padding-top: 60px;
+        z-index: 2;
+        transition:right 0.3s;
+    }
+    
+    nav ul li{
+        display: block;
+        margin:25px 25px;
+        transition: transform;
+    }
+    nav ul li:hover{
+        transition: smooth;
+        font-weight: bold;
+    }
+
+    nav ul .sml-scrn-icon{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        
+    }
+    nav ul .sml-scrn-icon:hover{
+        transition: smooth;
+        font-weight: bolder;
+    }
+    .sub-title{
+        font-size: 40px ;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 40px;
+        
+    }
+    .about-col-1 img{
+        width: 100%;
+        
+    }
+    .about-col-2{
+        font-size: 16px;
+    }
+    .tab-links{
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
