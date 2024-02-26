@@ -202,7 +202,7 @@
 
                         <div>
                             <button type="reset" class="btn2">Reset</button>
-                            <button type="submit" class=" btn2">Submit</button>
+                            <button type="submit" class=" btn2" onclick="callMail()">Submit</button>
                         </div>
 
                     </form>
@@ -220,6 +220,28 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script >
+            function callMail() {
+    var Name =document.getElementById("name").value;
+    var email =document.getElementById("email").value;
+    var Subject=document.getElementById("subject").value;
+    var Message=document.getElementById("textArea").value;
+    if(Name==""){
+        alert("Name can't be blank");
+        return;
+    }else if(email==""){
+        alert("Email can't be blank");
+        return;
+      }else if(Subject==""){
+        alert("Subject can't be blank");
+        return;
+    }else if(Message==""){
+        alert("Atleast type the message");
+        return;
+    }
+    var body ="Hi, my name is "+Name+". My email is "+email+"%0D%0A %0D%0A"+Message;
+    var str="mailto:rahulgorai0206@gmail.com?subject="+"("+Name+"):  "+Subject+"&body="+body;
+    window.open(str);
+}
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname) {
@@ -242,21 +264,7 @@
             sidemenu.style.right="-900px";
         }
     </script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "anyapploginsoumya@gmail.com",
-                Password : "password",
-                To : 'anyapploginsoumya@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : document.getElementById("subject").value,
-                Body : document.getElementById("textArea").value
-            }).then(
-              message => alert("Email sent Successfully.")
-            );
-        }
-    </script>
+
 </body>
 
 </html>
